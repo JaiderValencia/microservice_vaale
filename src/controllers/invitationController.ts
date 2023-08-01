@@ -86,6 +86,7 @@ const controller = {
             },
             actions: {
                 limit: number,
+                totalPages: number
                 next?: string,
                 previous?: string
             },
@@ -100,6 +101,7 @@ const controller = {
             },
             actions: {
                 limit,
+                totalPages: limitPag
             },
             list: [...invitationsParsed]
         }

@@ -35,5 +35,5 @@ Para descargar el archivo CSV le das en Archivo/Descargar/Valores separados por 
 
 # Muchas gracias
 Gracias por leerme y tomarte el tiempo de probar mi proyecto, me encantaría recibir recomendaciones o sugerencias. Me puedes encontrar en:
-- linkedin: linkedin.com/in/jaider-valencia-164053209/
+- linkedin: https://www.linkedin.com/in/jaider-valencia-164053209/
 - discord: jaiderxiaomi

@@ -6,6 +6,13 @@ import { SupplierInvitation } from "../database/models/SupplierInvitation"
 
 const controller = {
     postInvitation: (req: Request, res: Response) => {
+        if (!req.file) {
+            return res.status(400).json({
+                code:400,
+                message: 'Please upload a CSV file'
+            })
+        }
+
         const filePath = path.join(__dirname, `../CSV-Files/${req.file?.filename}`)
 
         const fileContent = fs.readFileSync(filePath, 'utf-8')

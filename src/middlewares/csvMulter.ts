@@ -15,13 +15,13 @@ const diskStorage = multer.diskStorage({
     }
 })
 
-interface MyRequest extends Request {
+interface RequestValidation extends Request {
     fileValidationError?: boolean;
 }
 
 const upload = multer({
     storage: diskStorage,
-    fileFilter: (req: MyRequest, file, cb) => {
+    fileFilter: (req: RequestValidation, file, cb) => {
         const fileExtension = path.extname(file.originalname)
 
         if (fileExtension == '.csv') {

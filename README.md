@@ -27,7 +27,7 @@ Puedes descargar postman o el programa que gustes para hacer peticiones http, lu
   6. Usa los scripts que están en la carpeta src/database/tables para generar las tablas
   7. Usa el script que está en la carpeta src/database/example_data para generar unos suppliers de prueba en el caso que lo quisieras hacer
 
-Una vez hecho eso puedes usar esta colleción de postman para probarlo: https://drive.google.com/file/d/1GEE7TiMVcqHZSBH_wuuioPu2peu-6m2h/view?usp=sharing
+Una vez hecho eso puedes usar esta colleción de postman para probarlo: https://drive.google.com/file/d/17mC0cAK_HPwJWFLx7LtS3AJGWq6Dsh_N/view?usp=sharing
 
 #EndPoints
 - **localhost:3000/invitation/csv**: por el método POST, subirás el archivo CSV

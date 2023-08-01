@@ -3,12 +3,13 @@ import { parse } from 'csv-parse/sync'
 import fs from 'fs'
 import path from 'path'
 import { SupplierInvitation } from "../database/models/SupplierInvitation"
+import { Supplier } from "../database/models/Supplier"
 
 const controller = {
     postInvitation: (req: Request, res: Response) => {
         if (!req.file) {
             return res.status(400).json({
-                code:400,
+                code: 400,
                 message: 'Please upload a CSV file'
             })
         }
@@ -25,13 +26,17 @@ const controller = {
             supplier_id: number,
             commerce_cell_phone: string
         }
-
+        
         fileParsed.forEach(async (invitation: Invitation) => {
-            await SupplierInvitation.create({
-                supplier_id: invitation.supplier_id,
-                commerce_cell_phone: invitation.commerce_cell_phone
-            })
-        });
+            const supplier = await Supplier.findByPk(invitation.supplier_id)
+
+            if (supplier) {
+                await SupplierInvitation.create({
+                    supplier_id: invitation.supplier_id,
+                    commerce_cell_phone: invitation.commerce_cell_phone
+                })
+            }
+        });        
 
         res.status(200).json({
             code: 200,

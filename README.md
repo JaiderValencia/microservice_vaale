@@ -29,6 +29,10 @@ Puedes descargar postman o el programa que gustes para hacer peticiones http, lu
 
 Una vez hecho eso puedes usar esta colleción de postman para probarlo: https://drive.google.com/file/d/1GEE7TiMVcqHZSBH_wuuioPu2peu-6m2h/view?usp=sharing
 
+#EndPoints
+- **localhost:3000/invitation/csv**: por el método POST, subirás el archivo CSV
+- **localhost:3000/invitation**: por el método GET, verás todas las invitaciones, le pasas la query **page** para elegir la pagina en la que quieres estar
+
 # ¿Dónde puedo generar un archivo CSV?
 He visto que en la herramienta **hoja de cálculo** de google se puede guardar el archivo como CSV, aquí te dejo un archivo de ejemplo para que lo puedas clonar y modificar: https://docs.google.com/spreadsheets/d/1rsgDwx8YIHEK9rsPXJbJy09lsxcnrBGbrdRr-ByQc_g/edit?usp=sharing
 Para descargar el archivo CSV le das en Archivo/Descargar/Valores separados por coma (CSV), y listo.
